@@ -16,11 +16,11 @@ library(datasauRus)
 
 
 ### Exercise 1
- The datasaurus_dozen file has 1846 rows and 3 columns/variables.The Variables includes: dataset, x, and y.
+ The datasaurus_dozen file has 1846 rows and 3 columns/variables.The Variables includes: data set, x, and y.
 
 ### Exercise 2
-
-(The answers for this Exercise are given for you below. But you should clean up some of the narrative so that it only includes what you want to turn in.)
+dino_data <- datasaurus_dozen %>%
+filter(dataset == "dino")
 
 First let's plot the data in the dino dataset:
 
