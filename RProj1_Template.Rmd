@@ -66,7 +66,7 @@ dino_data %>%
 
 ### Exercise 4
 
-(Add code and narrative as needed. Note that two R chunks are given but they are not labeled. Use the convention from above to name them appropriately.)
+The correlation coeffiecient for the circle has a -.0038 differece from the dino with the circle being -.0683 and the dino being -.0645. 
 
 ```{r plot-circle}
 dino_data <- datasaurus_dozen %>%
@@ -77,8 +77,9 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
 
 ```
 
-```{r}
-
+```{r cor-circle}
+dino_data %>%
+  summarize(r = cor(x, y))
 
 ```
 
