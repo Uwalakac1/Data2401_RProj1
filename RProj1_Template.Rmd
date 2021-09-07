@@ -21,6 +21,8 @@ library(datasauRus)
 ### Exercise 2
 dino_data <- datasaurus_dozen %>%
 filter(dataset == "dino")
+dino_data %>%
+summarize(r = cor(x,y))
 
 First let's plot the data in the dino dataset:
 
@@ -31,6 +33,7 @@ ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
   geom_point()
 ```
 
+
 And next calculate the correlation between `x` and `y` in this dataset:
 
 ```{r cor-dino}
@@ -39,20 +42,25 @@ dino_data %>%
 ```
 
 ### Exercise 3
+The correlation Coefficient for the star graph is -0.630 all though it is similar to the dino data due to them both being non-linear, they have a difference -.015.
+```{r}
 
-(Add code and narrative as needed. Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient. To finish, remember to clean up the narrative by removing these instructions.)
-
-
+```
 
 ```{r plot-star}
-
+dino_data <- datasaurus_dozen %>%
+  filter(dataset == "star")
+ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
+  geom_point()
+```
 
 ```
 
 I'm some text, you should replace me with more meaningful text...
  
 ```{r cor-star}
-
+dino_data %>%
+  summarize(r = cor(x, y))
 
 ```
 
