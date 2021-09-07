@@ -6,7 +6,7 @@ output:
   html_document: 
     fig_height: 8
     highlight: textmate
-    theme: cosmo
+    theme: cerulean
 ---
 
 MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT. 
